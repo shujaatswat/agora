@@ -11,16 +11,20 @@ import Reviews from "./reviews";
 
 const CompareTable = () => {
   return (
-    <Table className="table-auto w-full border-collapse text-center">
+    <Table className="table-auto w-full  text-center">
       <TableBody>
         <TableRow>
-          <TableHead className="border-b border-gray-300 text-left"></TableHead>
-          {items.map((item, i) => (
-            <TableCell key={i} className="border-b border-gray-300">
-              <CompareCard item={item} />
-            </TableCell>
-          ))}
+          <TableHead>
+            {items.map((item, index) => {
+              return (
+                <TableCell key={index}>
+                  <CompareCard item={item} />
+                </TableCell>
+              );
+            })}
+          </TableHead>
         </TableRow>
+
         <TableRow>
           <TableHead className="border-b border-gray-300">Price</TableHead>
           {items.map((item, i) => (
