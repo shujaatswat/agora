@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/agora/static/css/main.e3256ea1.css",
+    "main.js": "/agora/static/js/main.87ab81f5.js",
+    "static/js/453.9fe1d45d.chunk.js": "/agora/static/js/453.9fe1d45d.chunk.js",
+    "index.html": "/agora/index.html",
+    "main.e3256ea1.css.map": "/agora/static/css/main.e3256ea1.css.map",
+    "main.87ab81f5.js.map": "/agora/static/js/main.87ab81f5.js.map",
+    "453.9fe1d45d.chunk.js.map": "/agora/static/js/453.9fe1d45d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e3256ea1.css",
+    "static/js/main.87ab81f5.js"
+  ]
+}
