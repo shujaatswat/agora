@@ -5,7 +5,7 @@
 // import React, { useState } from "react";
 // import Header from "../components/Header";
 // import Container from "../components/container";
-// import { Slider } from "../components/Slider";
+// import { Sliders } from "../components/Slider";
 
 // function About() {
 //   const [currentImage, setCurrentImage] = useState(0);
@@ -34,7 +34,7 @@
 //     <>
 //       <Header />
 //       <Container>
-//         <div className='grid grid-cols-2'>
+//         <div className="grid grid-cols-2">
 //           <div>
 //             <Slider
 //               currentImage={currentImage}
@@ -42,7 +42,7 @@
 //               handlePrev={handlePrev}
 //               handleNext={handleNext}
 //             />
-//             <div className='flex gap-1 items-center mt-4'>
+//             <div className="flex gap-1 items-center mt-4">
 //               {ProductImages.map((img, index) => (
 //                 <img
 //                   key={index}

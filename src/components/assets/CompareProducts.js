@@ -1,6 +1,6 @@
 const items = [
   {
-    image: "images/compareimg1.webp",
+    image: "/images/compareimg1.webp",
     paraText: "Buckled Maxi Croco Black Leather Tote Bag with...",
     price: "$698.00",
     brand: "Mac Duggal",
@@ -8,7 +8,7 @@ const items = [
     customerRating: 0,
   },
   {
-    image: "images/compareimg2.webp",
+    image: "/images/compareimg2.webp",
     paraText: "Ebony Croc Minimal Backpack",
     price: "$99.00",
     brand: "Diaper Bag",
@@ -16,7 +16,7 @@ const items = [
     customerRating: 0,
   },
   {
-    image: "images/compareimg3.webp",
+    image: "/images/compareimg3.webp",
     paraText: "Annette Top Handle, Black Lizard, Black Onyx",
     price: "$2450.00",
     brand: "Darby Scott",
@@ -24,7 +24,7 @@ const items = [
     customerRating: 0,
   },
   {
-    image: "images/compareimg4.webp",
+    image: "/images/compareimg4.webp",
     paraText: "Dragon Diffusion x Todd Snyder Woven Leather Shopper Tote I...",
     price: "$650.00",
     brand: "Dragon Diffusion",

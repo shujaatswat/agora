@@ -14,58 +14,23 @@ import Collections from "./pages/Collections";
 import PopularProducts from "./pages/PopularProducts";
 import StoreCrawler from "./pages/StoreCrawler";
 import ProductDetails from "./pages/productdetails";
+import CartPage from "./pages/CartPage";
 
 const AppRoutes = () => (
   <Routes>
-    <Route
-      path='/'
-      element={<Home />}
-    />
-    <Route
-      path='/about'
-      element={<About />}
-    />
-    <Route
-      path='/contact'
-      element={<Contact />}
-    />
-    <Route
-      path='/privacy'
-      element={<Privacy />}
-    />
-    <Route
-      path='/terms'
-      element={<Terms />}
-    />
-    <Route
-      path='/merchant'
-      element={<Merchant />}
-    />
-    <Route
-      path='/login'
-      element={<Login />}
-    />
-    <Route
-      path='/docs'
-      element={<Docs />}
-    />
-    <Route
-      path='/collections'
-      element={<Collections />}
-    />
-    <Route
-      path='/popular-products'
-      element={<PopularProducts />}
-    />
-    <Route
-      path='/productdetails'
-      element={<ProductDetails />}
-    />
-
-    <Route
-      path='/store-crawler'
-      element={<StoreCrawler />}
-    />
+    <Route path="/" element={<Home />} />
+    <Route path="/about" element={<About />} />
+    <Route path="/contact" element={<Contact />} />
+    <Route path="/privacy" element={<Privacy />} />
+    <Route path="/terms" element={<Terms />} />
+    <Route path="/merchant" element={<Merchant />} />
+    <Route path="/login" element={<Login />} />
+    <Route path="/docs" element={<Docs />} />
+    <Route path="/collections/:featureId" element={<Collections />} />
+    <Route path="/popular-products" element={<PopularProducts />} />
+    <Route path="/productdetails/:productId" element={<ProductDetails />} />
+    <Route path="cartpage" element={<CartPage />} />
+    <Route path="/store-crawler" element={<StoreCrawler />} />
   </Routes>
 );
 

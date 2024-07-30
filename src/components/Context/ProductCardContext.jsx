@@ -1,5 +1,6 @@
 // ProductCardContext.js
 import React, { createContext, useState, useEffect } from "react";
+import products from "../assets/products";
 
 // Create the context
 export const ProductCardContext = createContext();
@@ -11,21 +12,22 @@ export const ProductDataProvider = ({ children }) => {
 
   useEffect(() => {
     // Fetch data from the API
-    const fetchData = async () => {
-      try {
-        const productResponse = await fetch(
-          "https://jsonplaceholder.typicode.com/users"
-        );
-        const productResult = await productResponse.json();
-        setProductData(productResult);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
+    // const fetchData = async () => {
+    //   try {
+    //     const productResponse = await fetch(
+    //       "https://jsonplaceholder.typicode.com/users"
+    //     );
+    //     const productResult = await productResponse.json();
+    //     setProductData(productResult);
+    //   } catch (error) {
+    //     console.error("Error fetching data:", error);
+    //   } finally {
+    //     setLoading(false);
+    //   }
+    // };
 
-    fetchData();
+    // fetchData();
+    setProductData(products);
   }, []);
 
   return (

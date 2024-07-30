@@ -1,17 +1,18 @@
 /** @format */
 
 import React, { useContext } from "react";
-import Header from "../components/Header";
 import ProductCard from "../components/Cards/productCard";
-import CustomButton from "../components/customButton";
-import FeaturedCard from "../components/Cards/featuredCard";
-import items from "../components/assets/Featured";
-import Container from "../components/container";
+// import items from "../components/assets/Featured";
+import Container from "../components/Layout/container";
 // import products from "../components/assets/products";
 import { ProductCardContext } from "../components/Context/ProductCardContext";
+import { featureContext } from "../components/Context/FeatureContext";
+import Header from "../components/Layout/Header";
+import CustomButton from "../components/Constant/customButton";
 
 function Home() {
   const { productData } = useContext(ProductCardContext);
+  const { featureData } = useContext(featureContext);
   return (
     <>
       <Header />
@@ -27,11 +28,11 @@ function Home() {
           </h3>
           <CustomButton BtnText="More Collections" />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-36">
-          {items.map((item, index) => (
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-36">
+          {featureData.map((item, index) => (
             <FeaturedCard key={index} item={item} />
           ))}
-        </div>
+        </div> */}
       </Container>
     </>
   );

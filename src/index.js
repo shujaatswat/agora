@@ -6,14 +6,20 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import FeatureContextProvider from "./components/Context/FeatureContext";
 import { ProductDataProvider } from "./components/Context/ProductCardContext";
+import { CartProvider } from "./components/Context/CartContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <ProductDataProvider>
-        <App />
+        <CartProvider>
+          <FeatureContextProvider>
+            <App />
+          </FeatureContextProvider>
+        </CartProvider>
       </ProductDataProvider>
     </BrowserRouter>
   </React.StrictMode>
