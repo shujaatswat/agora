@@ -23,7 +23,7 @@ export const ProductDataProvider = ({ children }) => {
     };
 
     fetchData(productData);
-  }, []);
+  }, [productData]);
 
   return (
     <ProductCardContext.Provider value={{ productData, loading }}>

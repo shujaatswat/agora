@@ -46,7 +46,7 @@ const CompareTable = () => {
             <TableCell key={i} className="border-b border-gray-300 py-3">
               <Reviews
                 rating={item.agoraScore}
-                style={"flex items-center justify-center"}
+                // style={"flex items-center justify-center"}
               />
             </TableCell>
           ))}
@@ -57,7 +57,7 @@ const CompareTable = () => {
             <TableCell key={i} className="py-4">
               <Reviews
                 rating={item.customerRating}
-                style={"flex items-center justify-center"}
+                // style={"flex items-center justify-center"}
               />
             </TableCell>
           ))}

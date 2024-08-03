@@ -23,7 +23,7 @@ const ProductCard = ({ product }) => {
           </div>
           <div className="flex justify-between">
             <p className=" font-semibold font-sans text-sm">
-              <a href="#">{product.name}</a>
+              <p>{product.name}</p>
             </p>
             <Hurt />
           </div>
