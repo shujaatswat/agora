@@ -9,13 +9,13 @@ const ProductCard = ({ product }) => {
   return (
     <>
       <Link
-        to={`/productdetails/${product.id}`}
+        to={`/productdetails/${product._id}`}
         onClick={window.scrollTo({ top: 0, behavior: "smooth" })}
       >
         <div className="group max-w-[300px] relative rounded-lg">
           <div className="relative mb-3.5 cursor-pointer">
             <img
-              src={product.image}
+              src={product.imageUrl}
               alt={product.name}
               className="aspect-[5/6] border-neutral-200 object-cover w-full border rounded-lg shadow-sm  bg-transparent"
             />
@@ -35,7 +35,7 @@ const ProductCard = ({ product }) => {
               ${product.price}
             </span>
           </div>
-          <Reviews rating="3" className="w-4 h-4" />
+          <Reviews rating={product.rating} className="w-4 h-4" />
         </div>
       </Link>
     </>

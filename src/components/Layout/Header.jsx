@@ -1,9 +1,10 @@
 /** @format */
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import { Link } from "react-router-dom";
 import CustomButton from "../Constant/customButton";
 import SignInModal from "../Modals/SignInModal";
+import { CartContext } from "../Context/CartContext";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,6 +12,9 @@ const Header = () => {
   const [placeholderText, setPlaceholderText] = useState("Search for products");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const fileInputRef = useRef(null);
+  const [isLogin, setIsLogin] = useState(false);
+  const [badge, setBadge] = useState(false);
+  const { cart } = useContext(CartContext);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -149,27 +153,31 @@ const Header = () => {
       </div>
       <nav className="ml-auto md:col-span-1 lg:pe-10">
         <ul className="hidden lg:flex items-center gap-3 justify-end">
-          {/* <li>
-            <CustomButton
-              BtnText="About"
-              path="/about"
-              className="bg-lightgray hover:bg-gray-100 text-black"
-            />
-          </li>
-          <li>
-            <Link to="/merchants">
+          {isLogin && (
+            <>
+              <li>
+                <CustomButton
+                  BtnText="About"
+                  path="/about"
+                  className="bg-lightgray hover:bg-gray-100 text-black"
+                />
+              </li>
+              <li>
+                <Link to="/merchants">
+                  <CustomButton
+                    BtnText="Merchants"
+                    path="/merchants"
+                    className="bg-lightgray hover:bg-gray-100 text-black"
+                  />
+                </Link>
+              </li>
               <CustomButton
-                BtnText="Merchants"
-                path="/merchants"
-                className="bg-lightgray hover:bg-gray-100 text-black"
+                className="bg-lightbrown text-white hover:bg-amber-700"
+                BtnText="Log in"
+                onClick={() => setIsModalOpen(true)}
               />
-            </Link>
-          </li>
-          <CustomButton
-            className="bg-lightbrown text-white hover:bg-amber-700"
-            BtnText="Log in"
-            onClick={() => setIsModalOpen(true)}
-          /> */}
+            </>
+          )}
 
           <li>
             <CustomButton
@@ -184,7 +192,7 @@ const Header = () => {
             />
           </li>
           <li className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium bg-neutral-100 hover:bg-neutral-100/80  dark:text-neutral-50 h-10 p-2.5 rounded-full">
-            <Link>
+            <Link to="setting">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -220,7 +228,9 @@ const Header = () => {
                 <circle cx="19" cy="21" r="1"></circle>
                 <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
               </svg>
-              <div class="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full"></div>
+              {cart.length > 0 && (
+                <div class="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full"></div>
+              )}
             </Link>
           </li>
         </ul>

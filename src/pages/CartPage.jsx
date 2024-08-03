@@ -11,7 +11,6 @@ const CartPage = () => {
       <div className="px-32">
         <Header />
       </div>
-      {/* <Container> */}
       <div className="grid grid-cols-12 gap-5">
         <div className="col-span-9 ">
           <CartCard cartText="Payment method" BtnText="Add payment method" />

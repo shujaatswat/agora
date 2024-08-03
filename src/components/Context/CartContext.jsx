@@ -15,7 +15,9 @@ export const CartProvider = ({ children }) => {
   useEffect(() => {
     try {
       localStorage.setItem("cart", JSON.stringify(cart));
-    } catch (error) {}
+    } catch (error) {
+
+    }
   }, [cart]);
 
   return (

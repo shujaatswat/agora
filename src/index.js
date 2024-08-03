@@ -9,18 +9,21 @@ import reportWebVitals from "./reportWebVitals";
 import FeatureContextProvider from "./components/Context/FeatureContext";
 import { ProductDataProvider } from "./components/Context/ProductCardContext";
 import { CartProvider } from "./components/Context/CartContext";
+import SimilarContextProvider from "./components/Context/similarContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <ProductDataProvider>
-        <CartProvider>
-          <FeatureContextProvider>
-            <App />
-          </FeatureContextProvider>
-        </CartProvider>
-      </ProductDataProvider>
+      <SimilarContextProvider>
+        <ProductDataProvider>
+          <CartProvider>
+            <FeatureContextProvider>
+              <App />
+            </FeatureContextProvider>
+          </CartProvider>
+        </ProductDataProvider>
+      </SimilarContextProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

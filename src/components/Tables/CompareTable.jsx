@@ -16,13 +16,19 @@ const CompareTable = () => {
             </TableCell>
           ))}
         </TableRow>
-        <TableRow>
+
+        {/* <TableRow>
           <TableHead className="border-b border-gray-300">Price</TableHead>
           {items.map((item, i) => (
             <TableCell key={i} className="border-b border-gray-300 py-3">
               {item.price}
             </TableCell>
           ))}
+        </TableRow> */}
+
+        <TableRow>
+          <TableHead>Price</TableHead>
+          <TableCell></TableCell>
         </TableRow>
         <TableRow>
           <TableHead className="border-b border-gray-300 py-3">Brand</TableHead>
@@ -40,7 +46,7 @@ const CompareTable = () => {
             <TableCell key={i} className="border-b border-gray-300 py-3">
               <Reviews
                 rating={item.agoraScore}
-                style="flex items-center justify-center"
+                style={"flex items-center justify-center"}
               />
             </TableCell>
           ))}
@@ -51,7 +57,7 @@ const CompareTable = () => {
             <TableCell key={i} className="py-4">
               <Reviews
                 rating={item.customerRating}
-                style="flex items-center justify-center"
+                style={"flex items-center justify-center"}
               />
             </TableCell>
           ))}

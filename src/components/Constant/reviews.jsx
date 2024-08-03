@@ -34,7 +34,7 @@ function Reviews({ rating, className }) {
         className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ml-4"
         style={{ marginTop: "2px" }}
       >
-        <span className="text-neutral-600 text-xs">{rating}</span>
+        <span className="text-neutral-600 text-xs">{rating.toFixed(2)}</span>
       </button>
     </div>
   );

@@ -15,6 +15,7 @@ import PopularProducts from "./pages/PopularProducts";
 import StoreCrawler from "./pages/StoreCrawler";
 import ProductDetails from "./pages/productdetails";
 import CartPage from "./pages/CartPage";
+import SettingPage from "./pages/SettingPage";
 
 const AppRoutes = () => (
   <Routes>
@@ -31,6 +32,7 @@ const AppRoutes = () => (
     <Route path="/productdetails/:productId" element={<ProductDetails />} />
     <Route path="cartpage" element={<CartPage />} />
     <Route path="/store-crawler" element={<StoreCrawler />} />
+    <Route path="setting" element={<SettingPage/>}/>
   </Routes>
 );
 

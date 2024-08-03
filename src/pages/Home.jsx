@@ -9,10 +9,13 @@ import { ProductCardContext } from "../components/Context/ProductCardContext";
 import { featureContext } from "../components/Context/FeatureContext";
 import Header from "../components/Layout/Header";
 import CustomButton from "../components/Constant/customButton";
+import FeaturedCard from "../components/Cards/featuredCard";
+// import items from "../components/assets/Featured";
 
 function Home() {
   const { productData } = useContext(ProductCardContext);
   const { featureData } = useContext(featureContext);
+  console.log(featureData, "shujat");
   return (
     <>
       <Header />
@@ -28,11 +31,11 @@ function Home() {
           </h3>
           <CustomButton BtnText="More Collections" />
         </div>
-        {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-36">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-36">
           {featureData.map((item, index) => (
             <FeaturedCard key={index} item={item} />
           ))}
-        </div> */}
+        </div>
       </Container>
     </>
   );
